@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Hola !</title>
+
+<style>
+	:root {
+  --bg: #dcdde1;
+  --color-icon: #535c68;
+  --social-icon1: #e4405f;
+  --social-icon2: #3b5999;
+  --social-icon3: #e4405f;
+  --social-icon4: #cd201f;
+  --social-icon5: #0077B5;
+}
+
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	fo
+}
+
+.banner{
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url('{% static "background5.jpg"%}');
+	background-size: cover;
+	background-position: center;
+}
+.content{
+	width: 100%;
+	position: absolute;
+	top:50%;
+	transform: translateY(-50%);
+	text-align: center;
+	color: #fff;
+	font-size: 2rem;
+}
+input {
+	width: 45px;
+	height: 45px;
+	font-size: 0;
+  	background: url('{% static "microphone.png"%}') ;
+  	background-size: cover;
+	border: 0;
+	border-radius: 35px;
+	margin: 18px;
+	outline: none;
+}
+
+p{
+	 color: #2D082E;
+}
+h1{
+	color: #94DAEA;
+	border: double black;
+}
+label {
+	color: #2D082E;
+}
+textarea{
+	background-color: transparent;
+	border:groove 4px #2D082E;
+}
+
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+	<center>
+	<div  class="banner">
+		<div class="content">
+			<form action="{% url 'homeIndex' %}">
+			<h1>HOLA is Here !</h1>
+			<br />
+			<br />
+			<p>press microphone to start recording</p>
+			<input type="submit" onclick="Click" id="recButton" ></input>
+			<br />
+			<br />
+			<label for="story">What is predecting : </label>
+			<br />
+			<br />
+			<textarea id="text" style="font-size: 35px;color:#94DAEA; text-align: center;">{{v}}</textarea>
+		</form>
+		</div>
+
+		<!--<form>
+			<input type="" name="text" class="forme">
+		</form>-->
+		<!--<img src="microphone.png" >
+
+
+		<form class="audio">
+			<input type="text" name="audio">
+			<button>Upload</button>
+		</form>-->
+	</div>
+	</center>
+</body>
+
+</html>
+
